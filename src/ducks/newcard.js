@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import { browserHistory } from 'react-router'
-import {setCard, addNewCardtoUser, removeCardFromCurrent, removeCardFromUser} from './current'
+import {setCard, addNewCardtoUser, removeCardFromCurrent, overWritePeriods, removeCardFromUser} from './current'
 
 
 export function createCard(formData){
