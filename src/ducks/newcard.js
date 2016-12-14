@@ -15,6 +15,7 @@ export function createCard(formData){
       dispatch(setCard(response.card))
       dispatch(addNewCardtoUser(response.card))
       dispatch(foundCard())
+      dispatch(overWritePeriods(''))
       browserHistory.push('/user')
     }).catch((response)=>{
       let errors = response.responseJSON.error.join(', ')
