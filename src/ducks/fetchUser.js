@@ -8,7 +8,7 @@ export function fetchUser(id){
   return function(dispatch){
     dispatch(findUser())
     $.ajax({
-      url: `http://localhost:3000/users/${id}`,
+      url: `https://ancient-hollows-21533.herokuapp.com/users/${id}`,
       type: 'GET',
       data: id,
       headers: {authorization: localStorage.getItem('token')}
