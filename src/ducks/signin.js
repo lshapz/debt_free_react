@@ -8,7 +8,7 @@ export function locateAndLoginUser(formData){
   return function(dispatch){
     dispatch(findUser())
     $.ajax({
-      url: 'http://localhost:3000/sessions',
+      url: 'https://ancient-hollows-21533.herokuapp.com/sessions',
       type: 'POST',
       data: JSON.stringify({auth: {email: formData.email, password: formData.password}}),
       contentType:"application/json; charset=utf-8",
