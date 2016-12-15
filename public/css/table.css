@@ -7,11 +7,12 @@
   /*width: 600px;*/
   /*width: 100%;*/
   margin: 5px 10px 5px 4%;
-  float: right;
-}
+  text-align: center;
+/*  float: right;
+*/}
 
 #the_table div.table-title {
-  display: block;
+  display: inline;
   margin: auto;
   max-width: 600px;
   padding:5px;
