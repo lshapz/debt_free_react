@@ -26,6 +26,7 @@ class PeriodBody extends React.Component {
   }
 
   editPeriodDetails(event){
+    debugger
     this.setState({showEditForm: !this.state.showEditForm, editChild: event.target.id})
   }
 
@@ -55,7 +56,7 @@ class PeriodBody extends React.Component {
     let body = this.props.current.user.periods.filter(period=>{
       return period.credit_card_id === this.props.current.card.id
     }).map((period, index)=>{
-      return <PeriodRow clickEdit={this.editPeriodDetails} clickPeriod={this.editShownPeriod.bind(this)} clickChild={this.showChildren.bind(this)} showChildren={this.state.showChildren} calledChild={this.state.calledChild} key={index} period={period} />
+      return <PeriodRow clickEdit={this.editPeriodDetails.bind(this)} clickPeriod={this.editShownPeriod.bind(this)} clickChild={this.showChildren.bind(this)} showChildren={this.state.showChildren} calledChild={this.state.calledChild} key={index} period={period} />
     })
     return (
       <tbody>

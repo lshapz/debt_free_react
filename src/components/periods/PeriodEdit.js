@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import {editPeriod} from '../../ducks/newperiod'
 import {addPeriodToUser} from '../../ducks/current'
-
+import {browserHistory} from 'react-router'
 class PeriodEdit extends Component {
   constructor(props){
     super(props)
@@ -43,7 +43,8 @@ class PeriodEdit extends Component {
   handleSubmit(event){
     event.preventDefault()
     this.props.editPeriod(this.state)
-    this.props.submittedPeriodDetails()
+    browserHistory.push('/user')
+    // this.props.submittedPeriodDetails()
   }
 
   render(){
@@ -62,4 +63,8 @@ class PeriodEdit extends Component {
   }
 }
 
-export default connect(null, { editPeriod, addPeriodToUser })(PeriodEdit)
+function mapStateToProps(state){
+  return {current: state.current, item: state.newPeriod.period}
+}
+
+export default connect(mapStateToProps, { editPeriod, addPeriodToUser })(PeriodEdit)

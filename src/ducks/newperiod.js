@@ -42,19 +42,21 @@ export function editPeriod(formData){
   }
 }
 
-export default(state = {finding_period: false, error: ''}, action) => {
+export default(state = {finding_period: false, error: '', period: ''}, action) => {
   switch (action.type) {
     case 'FINDING_PERIOD':
       return Object.assign({}, state, {finding_period: true})
+    case 'EDITING_PERIOD':
+      return Object.assign({}, state, {period: action.payload})
     case 'FOUND_PERIOD':
-      return Object.assign({}, state, {finding_period: false, error: ''})
+      return Object.assign({}, state, {finding_period: false, error: '', period: ''})
     case 'PERIOD_ERROR':
       return Object.assign({}, state, {error: action.payload})
     default:
       return state
   }
 }
-
+export const editThisPeriod = (input) => ({type: 'EDITING_PERIOD', payload: input})
 export const periodError = (input) => ({type: 'PERIOD_ERROR', payload: input})
 export const findingPeriod = () => ({type: 'FINDING_PERIOD'})
 export const foundPeriod = () => ({type: 'FOUND_PERIOD'})

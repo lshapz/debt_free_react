@@ -5,6 +5,7 @@ import { addPeriod } from '../ducks/userAccess'
 import { overWritePeriods, setCard } from '../ducks/current'
 import {setValue} from '../ducks/tableData'
 import {browserHistory} from 'react-router'
+
 const Form = (props) => {
 
   const handleChange = (event) => {
