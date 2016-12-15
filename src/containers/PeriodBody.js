@@ -26,7 +26,6 @@ class PeriodBody extends React.Component {
   }
 
   editPeriodDetails(event){
-    debugger
     this.setState({showEditForm: !this.state.showEditForm, editChild: event.target.id})
   }
 
