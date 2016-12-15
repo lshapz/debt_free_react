@@ -48,7 +48,7 @@ export function deletePeriodFromRails(input){
   
   return function(dispatch){
     $.ajax({
-      url: `https://ancient-hollows-21533.herokuapp.com/` + input,
+      url: `https://ancient-hollows-21533.herokuapp.com/periods/` + input,
       type: 'DELETE',
       data: input,
       contentType:"application/json; charset=utf-8",

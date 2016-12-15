@@ -38,4 +38,4 @@ class PeriodRow extends Component {
   }
 }
 
-module.exports = PeriodRow
+export default  connect(null, {deletePeriodFromRails})(PeriodRow)
