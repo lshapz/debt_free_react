@@ -1,5 +1,7 @@
 import React from 'react'
 import PeriodRow from '../components/periods/PeriodRow'
+import {removePeriodFromCurrent,setPeriod} from '../ducks/current'
+import {connect} from 'react-redux'
 
 class PeriodBody extends React.Component {
   constructor(props){
@@ -12,7 +14,6 @@ class PeriodBody extends React.Component {
   }
 
   showChildren(event){
-    debugger
     if (this.state.calledChild !== event.target.id && this.state.calledChild !== ""){
       this.setState({calledChild: event.target.id})
     }
@@ -33,7 +34,6 @@ class PeriodBody extends React.Component {
   }
 
   editShownPeriod(event){
-    debugger
     let thing = this.props.current.periods.filter((item)=>{
       if (item.id == event.target.id) {
         return item
@@ -51,8 +51,11 @@ class PeriodBody extends React.Component {
   }
 
   render(){
-    let body = this.props.current.periods.map((period, index)=>{
-      return <PeriodRow clickEdit={this.editPeriodDetails} clickPeriod={this.editShownPeriod} clickChild={this.showChildren.bind(this)} showChildren={this.state.showChildren} calledChild={this.state.calledChild} key={index} period={period} />
+    console.log(this.props)
+    let body = this.props.current.user.periods.filter(period=>{
+      return period.credit_card_id === this.props.current.card.id
+    }).map((period, index)=>{
+      return <PeriodRow clickEdit={this.editPeriodDetails} clickPeriod={this.editShownPeriod.bind(this)} clickChild={this.showChildren.bind(this)} showChildren={this.state.showChildren} calledChild={this.state.calledChild} key={index} period={period} />
     })
     return (
       <tbody>
@@ -62,4 +65,8 @@ class PeriodBody extends React.Component {
   }
 }
 
-module.exports = PeriodBody
+function mapStateToProps(state){
+  return {current: state.current}
+}
+
+export default connect(mapStateToProps, {removePeriodFromCurrent,setPeriod})(PeriodBody)

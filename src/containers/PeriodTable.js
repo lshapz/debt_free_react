@@ -17,7 +17,7 @@ import PeriodBody from './PeriodBody'
             <h3>Payment Periods</h3>
               <table id="periods" className="table-fill">
                 <PeriodHead />
-                <PeriodBody current={this.props.current} />
+                <PeriodBody />
               </table>
           </div>
         </div>

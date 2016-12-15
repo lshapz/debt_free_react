@@ -4,13 +4,14 @@ import '../../../public/css/periods.css'
 const PeriodHead = () => {
   return (
     <thead>
-      <tr className="periods-title">
-        <th>Period</th>
+      <tr>
         <th>Active?</th>
+        <th>Period</th>
         <th>Start Date</th>
         <th>End Date</th>
         <th>Payment</th>
         <th>Expenditure</th>
+        <th>Edit/Delete</th>
       </tr>
     </thead>
   )

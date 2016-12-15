@@ -18,28 +18,23 @@ class PeriodRow extends Component {
     this.props.clickChild(event)
   }
 
+  periodClick(event){
+    this.props.clickPeriod(event)
+  }
+
   render(){
-    if (this.props.showChildren && (this.props.calledChild === this.props.period.name)){
       return (
         <tr className="middleList">
+          <td><label><input type="checkbox" defaultChecked="checked"></input></label></td>
           <td key={1}>{this.props.period.name}</td>
           <td key={2}>{this.props.period.start_month} {this.props.period.start_year} </td>
           <td key={3}>{this.props.period.end_month} {this.props.period.end_year} </td>
           <td key={4}>${this.props.period.payment} </td>
           <td key={5}>${this.props.period.expenditure} </td>
-          <td key={6}><input type="button" id={this.props.period.id} onClick={this.deleteThing.bind(this)} value="delete period" /></td>
-          <td key={7}><input type="button" id={this.props.period.id} onClick={this.props.editButton} value="edit period" /></td>
+          <td key={6}><input type="button" className="editdelete" id={this.props.period.id} onClick={this.deleteThing.bind(this)} value="delete" />
+          <input type="button" className="editdelete" id={this.props.period.id} onClick={this.props.editButton} value="edit" /></td>
         </tr>
       )
-    }
-    else {
-      return (
-        <tr className="middleList">
-          <td>{this.props.period.name}</td>
-          <td><button id={this.props.period.name} onClick={this.handleClick.bind(this)}>Expand</button></td>
-        </tr>
-      )
-    }
   }
 }
 
