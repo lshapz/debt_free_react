@@ -45,16 +45,16 @@ export function overWritePeriods(input){
 }
 
 export function deletePeriodFromRails(input){
-  
   return function(dispatch){
     $.ajax({
       url: `https://ancient-hollows-21533.herokuapp.com/periods/` + input,
       type: 'DELETE',
-      data: input,
+      data: input, 
       contentType:"application/json; charset=utf-8",
       datatype: 'json',
       headers: {authorization: localStorage.getItem('token')}
     }).done((response) => {
+      debugger
       dispatch(removePeriodFromCurrent(response.id))
       dispatch(removePeriodFromUser(response.id))
     })
@@ -78,9 +78,7 @@ export function removePeriodFromUser(input){
 
 export function removeCardFromUser(input){
   return {type: 'REMOVE_CARD_FROM_USER', payload: input}
-
 }
-
 
 export function setCurrentUser(input){
   return {type: 'SET_USER', payload: input}

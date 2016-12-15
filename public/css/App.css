@@ -92,13 +92,13 @@ ul li {
 .areachart {
   text-align: center;
   margin: 0 auto;
-  float: right;
+  float: left;
 }
 
 .linechart {
   text-align: center;
   margin: 0 auto;
-  float: right;
+  float: left;
 }
 
 .recharts-wrapper {
@@ -126,6 +126,7 @@ ul li {
   text-align: center;
   width: 25%;
   margin: 0 0 1% 20%;
+  float: right;
 }
 
 #navbar {
