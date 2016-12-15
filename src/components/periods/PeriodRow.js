@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { deletePeriodFromRails } from '../../ducks/current'
-
 class PeriodRow extends Component {
 
   constructor(props){
@@ -25,7 +24,7 @@ class PeriodRow extends Component {
   render(){
       return (
         <tr className="middleList">
-          <td><label><input type="checkbox" defaultChecked="checked"></input></label></td>
+          <td><label><input type="checkbox" defaultChecked="checked" id={this.props.period.id} onClick={this.periodClick.bind(this)} ></input></label></td>
           <td key={1}>{this.props.period.name}</td>
           <td key={2}>{this.props.period.start_month} {this.props.period.start_year} </td>
           <td key={3}>{this.props.period.end_month} {this.props.period.end_year} </td>
@@ -38,4 +37,4 @@ class PeriodRow extends Component {
   }
 }
 
-module.exports = PeriodRow
+export default connect(null, {deletePeriodFromRails})(PeriodRow)
