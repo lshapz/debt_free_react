@@ -32,7 +32,7 @@ import {connect} from 'react-redux'
   editShownPeriod(event){
     let thing = this.props.current.periods.filter(item=>{ if (item.id == event.target.id)
       {return item}})
-      
+
       if (thing.length >= 1)
           {this.props.removePeriodFromCurrent(event.target.id)}
       else {
@@ -64,7 +64,7 @@ import {connect} from 'react-redux'
     <div className="container">
       <div className="allforms">
         <div className="periodList">
-          {this.props.current.periods.length === 0 ? <h3>Please Add a Period</h3> : <h3>Payment Periods</h3>}
+          {this.props.current.user.periods.length === 0 ? <h3>Please Add a Period</h3> : <h3>Payment Periods</h3>}
             <ul>
               {showThis}
             </ul>
