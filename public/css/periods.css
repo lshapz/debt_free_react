@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo');
 
-#the_table {
+#periods {
   /*padding-left: 5.5%;*/
   font-size: 12px;
   /*margin: 0 auto;*/
   /*width: 600px;*/
   /*width: 100%;*/
   margin: 5px 10px 5px 4%;
-  float: right;
 }
 
-#the_table div.table-title {
+#periods .periods-title {
   display: block;
   margin: auto;
   max-width: 600px;
@@ -18,7 +17,7 @@
   width: 100%;
 }
 
-#the_table .table-title h3 {
+#periods .periods-title h3 {
    color: #fafafa;
    font-size: large;
    font-weight: 400;
@@ -41,10 +40,10 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
 }
-#the_table tr {
+#periods tr {
   padding-left: 1%;
 }
-#the_table th {
+#periods th {
   color:#D5DDE5;;
   background:#1b1e24;
   border-bottom:4px solid #9ea7af;
@@ -67,7 +66,7 @@ td:first-child {
   padding-left: 2%;
 }
 
-#the_table tr {
+#periods tr {
   border-top: 1px solid #C1C3D1;
   border-bottom-: 1px solid #C1C3D1;
   color:#666B85;
@@ -76,22 +75,22 @@ td:first-child {
   text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
 }
 
-#the_table tr:hover td {
+#periods tr:hover td {
   background:#4E5066;
   color:#FFFFFF;
   border-top: 1px solid #22262e;
   border-bottom: 1px solid #22262e;
 }
 
-#the_table tr:last-child td:first-child {
+#periods tr:last-child td:first-child {
   border-bottom-left-radius:3px;
 }
 
-#the_table tr:last-child td:last-child {
+#periods tr:last-child td:last-child {
   border-bottom-right-radius:3px;
 }
 
-#the_table .tablefill td {
+#periods .tablefill td {
   background:#FFFFFF;
   padding:20px;
   text-align:left;

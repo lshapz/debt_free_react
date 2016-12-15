@@ -14,7 +14,7 @@ import NewPeriod from './components/periods/NewPeriod'
 import EditPeriod from './components/periods/PeriodEdit'
 import NewCard from './components/cards/NewCard'
 import EditCard from './components/cards/EditCard'
-import PeriodList from './components/periods/PeriodList'
+import PeriodTable from './containers/PeriodTable'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import '../public/css/table.css';
 import GuestHome from './containers/GuestHome'
@@ -34,7 +34,7 @@ ReactDOM.render(
         <Route path="/try" component={TryCard} />
       </Route>
       <Route path="/user" component={UserHome}>
-        <Route path="/periods/show" component={PeriodList} />
+        <Route path="/periods/show" component={PeriodTable} />
       </Route>
       <Route path="/user/form" component={UserForms} >
         <Route path="/periods/new" component={NewPeriod} />

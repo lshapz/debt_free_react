@@ -13,7 +13,6 @@ render(){
   return (<div>
 
   <NavBarUser />
-    <h3 className="allforms">Currently Showing: {this.props.currentCard}</h3>
     {this.props.children}
     <Form />
     <Table />
