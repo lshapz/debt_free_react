@@ -55,10 +55,10 @@ export function deletePeriodFromRails(input){
       headers: {authorization: localStorage.getItem('token')}
     }).done((response) => {
 <<<<<<< HEAD
-      debugger
-=======
       // debugger
->>>>>>> thing
+=======
+      debugger
+>>>>>>> 7d8956ed0ba75a45bde50802ab36cf91fe2567bf
       dispatch(removePeriodFromCurrent(response.id))
       dispatch(removePeriodFromUser(response.id))
     })

@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo|PT+Sans|Reem+Kufi');
 
-<<<<<<< HEAD
-=======
 #intro{
   margin-top: 40px;
   margin-right: 25%;
@@ -11,7 +9,6 @@
 .intro{
   margin: 10px 7px 20px 7px;
 }
->>>>>>> thing
 #editperiodform {
   text-align: center;
   margin: 0 auto;
@@ -110,16 +107,26 @@ ul li {
   text-align: center;
   display: block;
   margin: 0 auto;
+<<<<<<< HEAD
 /*  float: left;
 */}
+=======
+  float: left;
+}
+>>>>>>> 7d8956ed0ba75a45bde50802ab36cf91fe2567bf
 
 .linechart {
   text-align: center;
     display: block;
 
   margin: 0 auto;
+<<<<<<< HEAD
 /*  float: left;
 */}
+=======
+  float: left;
+}
+>>>>>>> 7d8956ed0ba75a45bde50802ab36cf91fe2567bf
 
 .recharts-wrapper {
   margin-left: 3%;
@@ -146,14 +153,14 @@ ul li {
 */  text-align: center;
   width: 25%;
 <<<<<<< HEAD
-  margin: 0 0 1% 20%;
-  float: right;
-=======
   margin: 0 auto;
   /*margin-left: 10px;*/
   /*display: inline-block;*/
   /*float: right;*/
->>>>>>> thing
+=======
+  margin: 0 0 1% 20%;
+  float: right;
+>>>>>>> 7d8956ed0ba75a45bde50802ab36cf91fe2567bf
 }
 
 #navbar {
