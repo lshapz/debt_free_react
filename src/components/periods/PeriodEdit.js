@@ -55,8 +55,8 @@ class PeriodEdit extends Component {
         <label id="userLabel">Name<input type="text" id="period[name]" defaultValue={this.props.item.name} onChange={this.handleName.bind(this)}/></label>
         <label id="userLabel">Start Date<input type="month" id="period[start_date]" defaultValue={this.state.start_full_date} onChange={this.handleStartDate.bind(this)}/></label>
         <label id="userLabel">End Date<input type="month" id="period[end_date]" defaultValue={this.state.end_full_date} onChange={this.handleEndDate.bind(this)}/></label>
-        <label id="userLabel">Monthly Expenditure<input type="number" id="period[expenditure]" defaultValue={this.props.item.expenditure} step="100" onChange={this.handleExpenditure.bind(this)} /></label>
-        <label id="userLabel">Monthly Payment<input type="number" id="period[payment]" step="100" defaultValue={this.props.item.payment} onChange={this.handlePayment.bind(this)} /></label>
+        <label id="userLabel">Monthly Expenditure<input type="number" id="period[expenditure]" defaultValue={this.props.item.expenditure} onChange={this.handleExpenditure.bind(this)} /></label>
+        <label id="userLabel">Monthly Payment<input type="number" id="period[payment]" defaultValue={this.props.item.payment} onChange={this.handlePayment.bind(this)} /></label>
         <input type="submit"/>
       </form>
       </div>

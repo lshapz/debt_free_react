@@ -5,6 +5,7 @@ import {browserHistory} from 'react-router'
 import {showNewCard,allFalse} from './userAccess'
 
 export function locateAndLoginUser(formData){
+  // debugger
   return function(dispatch){
     dispatch(findUser())
     $.ajax({
@@ -18,6 +19,7 @@ export function locateAndLoginUser(formData){
       dispatch(loginUser())
       localStorage.setItem('token', response.jwt)
       let userid = response.user.id
+      // debugger
       dispatch(fetchUser(userid))
       // dispatch(allFalse())
       // debugger
