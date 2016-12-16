@@ -24,27 +24,23 @@ export function fetchUser(id){
         let averagePayment
         let averageExpenditure
 
-        if (recentCardPeriods.length > 0) {
-          averageExpenditure = recentCardPeriods.reduce((a,b)=>{return a + b.expenditure}, 0)/recentCardPeriods.length
-          averagePayment = recentCardPeriods.reduce((a,b)=>{return a + b.payment}, 0)/recentCardPeriods.length 
-        }
-        else {
-          recentCardPeriods = []
-          // HTK refactor we should figure out how to determine what the user wants as default if no periods - maybe set up a dummy period? 
-          averageExpenditure = 500
-          averagePayment = 600
-        }
-        debugger
+        // if (recentCardPeriods.length > 0) {
+        //   averageExpenditure = recentCardPeriods.reduce((a,b)=>{return a + b.expenditure}, 0)/recentCardPeriods.length
+        //   averagePayment = recentCardPeriods.reduce((a,b)=>{return a + b.payment}, 0)/recentCardPeriods.length 
+        // }
+        // else {
+        //   recentCardPeriods = []
+        //   averageExpenditure = 0
+        //   averagePayment = recentCard.min_payment
+        // }
         dispatch(setCard(recentCard))
         dispatch(setPeriod(recentCardPeriods))
         const newValues = {debt: recentCard.debt,
                         start_month: new Date().getMonth(),
                         start_year: new Date().getFullYear(),
-                        // end_month: recentPeriod.end_month,
-                        // end_year: recentPeriod.end_year,
                         creditcard: recentCard.name,
-                        payment: averagePayment,
-                        expenditure: averageExpenditure,
+                        payment: recentCard.min_payment, // averagePayment,
+                        expenditure: recentCard.min_payment/2, // averageExpenditure,
                         interest: recentCard.interest_rate}
         dispatch(setValue(newValues))
         browserHistory.push('/user')

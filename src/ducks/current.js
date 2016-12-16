@@ -54,7 +54,7 @@ export function deletePeriodFromRails(input){
       datatype: 'json',
       headers: {authorization: localStorage.getItem('token')}
     }).done((response) => {
-      debugger
+      // debugger
       dispatch(removePeriodFromCurrent(response.id))
       dispatch(removePeriodFromUser(response.id))
     })
