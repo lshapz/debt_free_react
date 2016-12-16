@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo|PT+Sans|Reem+Kufi');
+
+#intro{
+  margin-top: 40px;
+  margin-right: 25%;
+  margin-left: 25%;
+  text-align: center;
+}
+.intro{
+  margin: 10px 7px 20px 7px;
+}
+#editperiodform {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+.clickable {
+   display: inline;
+   padding: 0px;
+ }
+ .clickable label{
+   display: inline;
+ }
+ .clickable input[type="checkbox"] {
+   display: inline;
+ }
+
+
+h2, h3, h4 {
+  font-family: 'PT+Sans', serif;
+}
+
+body {
+}
+
+
+label {
+  display: inline-block;
+}
+
+p {
+  margin:0
+}
+
+select {
+  font-size: .75em;
+}
+.middleList{
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0px;
+  padding: 0px;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 100%;
+}
+
+#tableform {
+  text-align:center;
+}
+
+#newperiodform {
+  text-align:center;
+}
+
+.periodList {
+  width: 15%;
+  display:inline;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#forms {
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  color: black;
+}
+
+#signtitle {
+  font-size: 1.75em;
+  text-align: center;
+}
+
+#userLabel {
+  font-size: 1.25em;
+  padding-right: 5px;
+  text-align: left;
+}
+
+ul li {
+  display: inline;
+}
+
+.areachart {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+<<<<<<< HEAD
+/*  float: left;
+*/}
+=======
+  float: left;
+}
+>>>>>>> 7d8956ed0ba75a45bde50802ab36cf91fe2567bf
+
+.linechart {
+  text-align: center;
+    display: block;
+
+  margin: 0 auto;
+<<<<<<< HEAD
+/*  float: left;
+*/}
+=======
+  float: left;
+}
+>>>>>>> 7d8956ed0ba75a45bde50802ab36cf91fe2567bf
+
+.recharts-wrapper {
+  margin-left: 3%;
+  padding-left: 3%;
+  display: inline-block;
+}
+
+.table {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#results {
+  text-align: center;
+  border-radius: 3px;
+  width: 66%;
+  margin: 0 auto;
+  background-color: rgba(100, 100, 100, .1);
+}
+
+#chartTitle {
+/*  color: white;
+  background-color: blue;
+*/  text-align: center;
+  width: 25%;
+<<<<<<< HEAD
+  margin: 0 auto;
+  /*margin-left: 10px;*/
+  /*display: inline-block;*/
+  /*float: right;*/
+=======
+  margin: 0 0 1% 20%;
+  float: right;
+>>>>>>> 7d8956ed0ba75a45bde50802ab36cf91fe2567bf
+}
+
+#navbar {
+  text-align: center;
+}
