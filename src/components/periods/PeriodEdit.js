@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import {editPeriod} from '../../ducks/newperiod'
 import {addPeriodToUser} from '../../ducks/current'
 import {browserHistory} from 'react-router'
+import '../../../public/css/App.css'
 class PeriodEdit extends Component {
   constructor(props){
     super(props)
@@ -51,12 +52,13 @@ class PeriodEdit extends Component {
     return(
       <div className="twelve columns" id="editperiodform">
       <form onSubmit={this.handleSubmit.bind(this)}>
-        <label id="userLabel">Name<input type="text" id="period[name]" defaultValue={this.props.item.name} onChange={this.handleName.bind(this)}/></label>
-        <label id="userLabel">Start Date<input type="month" id="period[start_date]" defaultValue={this.state.start_full_date} onChange={this.handleStartDate.bind(this)}/></label>
-        <label id="userLabel">End Date<input type="month" id="period[end_date]" defaultValue={this.state.end_full_date} onChange={this.handleEndDate.bind(this)}/></label>
-        <label id="userLabel">Monthly Expenditure<input type="number" id="period[expenditure]" defaultValue={this.props.item.expenditure} step="100" onChange={this.handleExpenditure.bind(this)} /></label>
-        <label id="userLabel">Monthly Payment<input type="number" id="period[payment]" step="100" defaultValue={this.props.item.payment} onChange={this.handlePayment.bind(this)} /></label>
-        <input type="submit"/>
+        <p />
+        <p><label id="userLabel">Name<input type="text" id="period[name]" defaultValue={this.props.item.name} onChange={this.handleName.bind(this)}/></label></p>
+        <p><label id="userLabel">Start Date<input type="month" id="period[start_date]" defaultValue={this.state.start_full_date} onChange={this.handleStartDate.bind(this)}/></label></p>
+        <p><label id="userLabel">End Date<input type="month" id="period[end_date]" defaultValue={this.state.end_full_date} onChange={this.handleEndDate.bind(this)}/></label></p>
+        <p><label id="userLabel">Monthly Expenditure<input type="number" id="period[expenditure]" defaultValue={this.props.item.expenditure} step="100" onChange={this.handleExpenditure.bind(this)} /></label></p>
+        <p><label id="userLabel">Monthly Payment<input type="number" id="period[payment]" step="100" defaultValue={this.props.item.payment} onChange={this.handlePayment.bind(this)} /></label></p>
+        <p><input type="submit"/></p>
       </form>
       </div>
       )

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo|PT+Sans|Reem+Kufi');
 
+#editperiodform {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;
@@ -91,20 +96,23 @@ ul li {
 
 .areachart {
   text-align: center;
+  display: block;
   margin: 0 auto;
-  float: right;
-}
+/*  float: left;
+*/}
 
 .linechart {
   text-align: center;
+    display: block;
+
   margin: 0 auto;
-  float: right;
-}
+/*  float: left;
+*/}
 
 .recharts-wrapper {
-  margin-right: 3%;
-  padding-right: 3%;
-  display: inline;
+  margin-left: 3%;
+  padding-left: 3%;
+  display: inline-block;
 }
 
 .table {
