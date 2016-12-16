@@ -96,20 +96,23 @@ ul li {
 
 .areachart {
   text-align: center;
+  display: block;
   margin: 0 auto;
 /*  float: left;
 */}
 
 .linechart {
   text-align: center;
+    display: block;
+
   margin: 0 auto;
 /*  float: left;
 */}
 
 .recharts-wrapper {
-  margin-right: 3%;
-  padding-right: 3%;
-  display: inline;
+  margin-left: 3%;
+  padding-left: 3%;
+  display: inline-block;
 }
 
 .table {
@@ -130,8 +133,10 @@ ul li {
   background-color: blue;
   text-align: center;
   width: 25%;
-  margin: 0 0 1% 20%;
-  float: right;
+  margin: 0 auto;
+  margin-right: 70%;
+  display: inline-block;
+  /*float: right;*/
 }
 
 #navbar {
