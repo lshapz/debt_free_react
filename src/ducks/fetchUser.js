@@ -5,6 +5,7 @@ import {setValue} from './tableData'
 import { browserHistory } from 'react-router'
 
 export function fetchUser(id){
+  // debugger
   return function(dispatch){
     dispatch(findUser())
     $.ajax({
@@ -13,24 +14,30 @@ export function fetchUser(id){
       data: id,
       headers: {authorization: localStorage.getItem('token')}
     }).done((response) => {
-      // debugger
       dispatch(loginUser())
       dispatch(setCurrentUser(response))
       if (response.credit_cards.length > 0 ){
-        // 
         var recentCard = response.credit_cards[0]
-        var recentCardPeriods = response.periods.filter(per=>{
-          return per.credit_card_id === recentCard.id
-        })
-        // let recentPeriod = recentCardPeriods[recentCardPeriods.length-1]
-        // debugger
+        let recentCardPeriods
+        let averagePayment
+        let averageExpenditure
+
+        if (response.periods.length > 0) {
+          recentCardPeriods = response.periods.filter(period=>{
+              return period.credit_card_id === recentCard.id
+            })
+          averageExpenditure = recentCardPeriods.reduce((a,b)=>{return a + b.expenditure}, 0)/recentCardPeriods.length
+          averagePayment = recentCardPeriods.reduce((a,b)=>{return a + b.payment}, 0)/recentCardPeriods.length 
+        }
+        else {
+          recentCardPeriods = []
+          // HTK refactor we should figure out how to determine what the user wants as default if no periods - maybe set up a dummy period? 
+          averageExpenditure = 500
+          averagePayment = 600
+        }
+
         dispatch(setCard(recentCard))
-        // debugger
         dispatch(setPeriod(recentCardPeriods))
-        // debugger
-        var averageExpenditure = recentCardPeriods.reduce((a,b)=>{return a + b.expenditure}, 0)/recentCardPeriods.length
-        var averagePayment = recentCardPeriods.reduce((a,b)=>{return a + b.payment}, 0)/recentCardPeriods.length
-        // debugger
         const newValues = {debt: recentCard.debt,
                         start_month: new Date().getMonth(),
                         start_year: new Date().getFullYear(),
