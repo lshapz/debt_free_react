@@ -24,8 +24,8 @@
     "thunk": "^0.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts",
+    "start": "./src/index.js",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
