@@ -18,14 +18,13 @@ export function fetchUser(id){
       dispatch(setCurrentUser(response))
       if (response.credit_cards.length > 0 ){
         var recentCard = response.credit_cards[0]
-        let recentCardPeriods
+        let recentCardPeriods = response.periods.filter(period=>{
+              return period.credit_card_id === recentCard.id
+            })
         let averagePayment
         let averageExpenditure
 
-        if (response.periods.length > 0) {
-          recentCardPeriods = response.periods.filter(period=>{
-              return period.credit_card_id === recentCard.id
-            })
+        if (recentCardPeriods.length > 0) {
           averageExpenditure = recentCardPeriods.reduce((a,b)=>{return a + b.expenditure}, 0)/recentCardPeriods.length
           averagePayment = recentCardPeriods.reduce((a,b)=>{return a + b.payment}, 0)/recentCardPeriods.length 
         }
@@ -35,7 +34,7 @@ export function fetchUser(id){
           averageExpenditure = 500
           averagePayment = 600
         }
-
+        debugger
         dispatch(setCard(recentCard))
         dispatch(setPeriod(recentCardPeriods))
         const newValues = {debt: recentCard.debt,
