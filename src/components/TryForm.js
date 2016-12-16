@@ -1,5 +1,5 @@
 import React from 'react'
-import InputBoxDoneTyping from 'react-input-box-done-typing'
+import InputBoxDoneTyping from 'revised-react-input-box-done-typing'
 import {connect} from 'react-redux'
 // import { addPeriod } from '../ducks/userAccess'
 import { overWritePeriods, setCard, resetCurrent} from '../ducks/current'
