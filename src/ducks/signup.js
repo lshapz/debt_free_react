@@ -33,7 +33,7 @@ export default(state = {creating_user: false, error: '', signingup: true}, actio
     case 'FINDING_USER':
       return Object.assign({}, state, {creating_user: true, signingup: true})
     case 'LOGIN_CREATED_USER':
-      return Object.assign({}, state, {creating_user: false, error: '', signingup: false})
+      return Object.assign({}, state, {creating_user: false, error: '', signingup: action.payload})
     case 'SIGN_UP_ERROR':
       return Object.assign({}, state, {error: action.payload})
     default:
@@ -43,4 +43,4 @@ export default(state = {creating_user: false, error: '', signingup: true}, actio
 
 export const errorMessage = (input) => ({type: 'SIGN_UP_ERROR', payload: input})
 export const findingUser = () => ({type: 'FINDING_USER'})
-export const loginNewUser = (response) => ({type: 'LOGIN_CREATED_USER'})
+export const loginNewUser = (response) => ({type: 'LOGIN_CREATED_USER', payload: false})
