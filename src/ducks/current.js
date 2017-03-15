@@ -47,7 +47,7 @@ export function overWritePeriods(input){
 export function deletePeriodFromRails(input){
   return function(dispatch){
     $.ajax({
-      url: `https://ancient-hollows-21533.herokuapp.com/periods/` + input,
+      url: `https://debtfree-api.herokuapp.com/periods/` + input,
       type: 'DELETE',
       data: input, 
       contentType:"application/json; charset=utf-8",

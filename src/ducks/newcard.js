@@ -7,7 +7,7 @@ export function createCard(formData){
   return function(dispatch){
     dispatch(findingCard())
     $.ajax({
-      url: 'https://ancient-hollows-21533.herokuapp.com/credit_cards',
+      url: 'https://debtfree-api.herokuapp.com/credit_cards',
       type: 'POST',
       data: {card: formData},
       headers: {authorization: localStorage.getItem('token')}
@@ -28,7 +28,7 @@ export function editCard(formData){
   return function(dispatch){
     dispatch(findingCard())
     $.ajax({
-      url: `https://ancient-hollows-21533.herokuapp.com/credit_cards/` + formData.id,
+      url: `https://debtfree-api.herokuapp.com/credit_cards/` + formData.id,
       type: 'PATCH',
       data: {card: formData},
       headers: {authorization: localStorage.getItem('token')}

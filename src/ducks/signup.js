@@ -10,7 +10,7 @@ export function createUser(formData){
   return function(dispatch){
     dispatch(findingUser())
     $.ajax({
-      url: 'https://ancient-hollows-21533.herokuapp.com/users',
+      url: 'https://debtfree-api.herokuapp.com/users',
       type: 'POST',
       data: JSON.stringify({auth: {name: formData.name, email: formData.email, password: formData.password}}),
       contentType:"application/json; charset=utf-8",

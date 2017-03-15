@@ -7,7 +7,7 @@ export function createPeriod(formData){
   return function(dispatch){
     dispatch(findingPeriod())
     $.ajax({
-      url: 'https://ancient-hollows-21533.herokuapp.com/periods',
+      url: 'https://debtfree-api.herokuapp.com/periods',
       type: 'POST',
       data: {period: formData},
       headers: {authorization: localStorage.getItem('token')}
@@ -28,7 +28,7 @@ export function editPeriod(formData){
   return function(dispatch){
     dispatch(findingPeriod())
     $.ajax({
-      url: `https://ancient-hollows-21533.herokuapp.com/periods/` + formData.id,
+      url: `https://debtfree-api.herokuapp.com/periods/` + formData.id,
       type: 'PATCH',
       data: {period: formData},
       headers: {authorization: localStorage.getItem('token')}
